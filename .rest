@@ -13,3 +13,9 @@ GET http://localhost:3000/contacts/650cbd370ea73a52db3a43c7 HTTP/1.1
 ### 
 //Contact 3
 GET http://localhost:3000/contacts/650cbd700ea73a52db3a43c8 HTTP/1.1
+
+###
+GET https://cse341-sattler.onrender.com/contacts HTTP/1.1
+
+###
+GET https://cse341-sattler.onrender.com/contacts/650cbd700ea73a52db3a43c8 HTTP/1.1
