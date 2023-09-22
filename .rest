@@ -1,4 +1,15 @@
-GET http://localhost:3000 HTTP/1.1
+# GET http://localhost:3000 HTTP/1.1
+
+# ###
+# GET https://cse341-qoxf.onrender.com HTTP/1.1
 
 ###
-GET https://cse341-qoxf.onrender.com HTTP/1.1
+GET http://localhost:3000/contacts HTTP/1.1
+
+###
+// Contact 2
+GET http://localhost:3000/contacts/650cbd370ea73a52db3a43c7 HTTP/1.1
+
+### 
+//Contact 3
+GET http://localhost:3000/contacts/650cbd700ea73a52db3a43c8 HTTP/1.1
