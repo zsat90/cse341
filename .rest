@@ -15,12 +15,6 @@ GET http://localhost:3000/contacts/650cbd370ea73a52db3a43c7 HTTP/1.1
 GET http://localhost:3000/contacts/650cbd700ea73a52db3a43c8 HTTP/1.1
 
 ###
-GET https://cse341-sattler.onrender.com/contacts HTTP/1.1
-
-###
-GET https://cse341-sattler.onrender.com/contacts/650cbd700ea73a52db3a43c8 HTTP/1.1
-
-###
 POST http://localhost:3000/contacts HTTP/1.1
 content-type: application/json
 
@@ -33,7 +27,7 @@ content-type: application/json
 }
 
 ###
-PUT http://localhost:3000/contacts/651494b91938dc6f647f228e HTTP/1.1
+PUT http://localhost:3000/contacts/6514bdfb4560b0eaec7b48e1 HTTP/1.1
 content-type: application/json
 
 {
@@ -45,4 +39,41 @@ content-type: application/json
 }
 
 ###
-DELETE http://localhost:3000/contacts/651494b91938dc6f647f228e HTTP/1.1
+DELETE http://localhost:3000/contacts/6514bdfb4560b0eaec7b48e1 HTTP/1.1
+
+
+
+
+// Render Requests
+###
+GET https://cse341-sattler.onrender.com/contacts HTTP/1.1
+
+###
+GET https://cse341-sattler.onrender.com/contacts/650cbd700ea73a52db3a43c8 HTTP/1.1
+
+###
+POST https://cse341-sattler.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Frodo" ,
+    "lastName": "Baggins" ,
+    "email": "testfb@faker.com",
+    "favoriteColor": "Red",
+    "birthday": "01/02/32"
+}
+
+###
+PUT https://cse341-sattler.onrender.com/contacts/6514bdb784fdd9604c80668a HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Frodo" ,
+    "lastName": "Baggins" ,
+    "email": "testfb@faker.com",
+    "favoriteColor": "Purple",
+    "birthday": "01/02/52"
+}
+
+###
+DELETE https://cse341-sattler.onrender.com/contacts/6514bdb784fdd9604c80668a HTTP/1.1
