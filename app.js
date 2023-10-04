@@ -5,14 +5,23 @@ const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const connectDB = require('./dbConn/connect');
 const bodyParser = require('body-parser');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDoc = require('./swagger.json');
 
 //Connection to DB
 connectDB();
 
 app
+  .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc))
   .use(bodyParser.json())
   .use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader(
+      'Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
+    );
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
   })
   .use('/', require('./routes'));
