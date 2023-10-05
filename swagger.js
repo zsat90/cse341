@@ -1,3 +1,4 @@
+// genterates a swagger.json file based on my routes/index.js file.
 const swaggerAutogen = require('swagger-autogen');
 
 const doc = {
